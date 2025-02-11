@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.pl": "prolog",
+        "*.cpp": "cpp",
+        "concepts": "cpp",
+        "raylib.h": "c"
+    }
+}

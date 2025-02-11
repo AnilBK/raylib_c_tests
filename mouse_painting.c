@@ -140,6 +140,8 @@ int main(void)
         {
             Image image = LoadImageFromTexture(target.texture);
             ImageFlipVertical(&image);
+            Rectangle crop = GetImageAlphaBorder(image, 0.0f); // Get the bounds of the non-transparent area
+            ImageCrop(&image, crop); // Crop the image to the bounds
             ExportImage(image, "my_amazing_texture_painting.png");
             UnloadImage(image);
             showSaveMessage = true;

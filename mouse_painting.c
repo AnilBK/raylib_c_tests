@@ -49,7 +49,7 @@ int main(void)
 
     // Clear render texture before entering the game loop
     BeginTextureMode(target);
-    ClearBackground(colors[0]);
+    ClearBackground((Color){ 0, 0, 0, 0 }); // Set background to transparent
     EndTextureMode();
 
     SetTargetFPS(120);              // Set our game to run at 120 frames-per-second
@@ -95,7 +95,7 @@ int main(void)
         {
             // Clear render texture to clear color
             BeginTextureMode(target);
-            ClearBackground(colors[0]);
+            ClearBackground((Color){ 0, 0, 0, 0 }); // Set background to transparent
             EndTextureMode();
         }
 
@@ -121,7 +121,7 @@ int main(void)
 
             // Erase circle from render texture
             BeginTextureMode(target);
-            if (mousePos.y > 50) DrawCircle((int)mousePos.x, (int)mousePos.y, brushSize, colors[0]);
+            if (mousePos.y > 50) DrawCircle((int)mousePos.x, (int)mousePos.y, brushSize, (Color){ 0, 0, 0, 0 }); // Set background to transparent
             EndTextureMode();
         }
         else if (IsMouseButtonReleased(MOUSE_BUTTON_RIGHT) && mouseWasPressed)
